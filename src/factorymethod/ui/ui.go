@@ -10,6 +10,5 @@ type Button interface {
 
 // A Dialog is a container for UI elements.
 type Dialog interface {
-	Render()
 	NewButton() Button
 }

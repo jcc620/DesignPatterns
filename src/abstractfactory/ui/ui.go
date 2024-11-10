@@ -11,7 +11,7 @@ type Button interface {
 // A Checkbox is an element that can be toggled on and off.
 type Checkbox interface {
 	Render()
-	Check()
+	Toggle()
 	IsChecked() bool
 }
 

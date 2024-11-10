@@ -23,7 +23,7 @@ func (b HTMLButton) Click() {
 }
 
 // OnClick changes the behavior of the button on being clicked.
-func (b HTMLButton) OnClick(f func()) {
+func (b *HTMLButton) OnClick(f func()) {
 	b.clickFunc = f
 }
 
@@ -33,5 +33,5 @@ func (d WebDialog) NewButton() ui.Button {
 	defaultClickFunc := func() {
 		fmt.Println("This HTML button was clicked!")
 	}
-	return HTMLButton{clickFunc: defaultClickFunc}
+	return &HTMLButton{clickFunc: defaultClickFunc}
 }
